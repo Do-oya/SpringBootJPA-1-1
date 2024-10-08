@@ -78,7 +78,7 @@ public class Order {
     public int getTotalPrice() {
         int totalPrice = 0;
         for (OrderItem orderItem : orderItems) {
-            totalPrice += orderItem.getOrderPrice();
+            totalPrice += orderItem.getOrderPrice() * orderItem.getCount(); // 가격 × 수량
         }
         return totalPrice;
     }
